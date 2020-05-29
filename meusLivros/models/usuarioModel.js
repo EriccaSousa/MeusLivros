@@ -1,14 +1,36 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
-var usuarioSchema = mongoose.Schema(
+const usuarioSchema = mongoose.Schema(
     {
-        email: {type: String, require: true, max: 100},
-        nomeCompleto: {type: String, require: true, max: 150},
-        senha: {type: String, require: true, max: 6}
+        nome: {
+            type: String,
+            require: true,
+            max: 150
+        },
+        email: {
+            type: String,
+            unique: true,
+            require: true,
+            max: 100
+        },
+        senha: {
+            type: String,
+            require: true,
+            max: 6,
+            select: false //a senha não vem na busca
+        }
     }
 );
 
+usuarioSchema.pre('save', async function (next) {
+    const hash = await bcrypt.hash(this.senha, 10);
+    this.senha = hash;
+
+    next();
+});
+
 // Criando modelo a partir do Schema
-var usuarioModel = mongoose.model('usuarios', usuarioSchema);
+const usuarioModel = mongoose.model('usuarios', usuarioSchema);
 
 module.exports = usuarioModel;

@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 
 require('./db/mongoConnection');
 
-const users = require('./routes/users');
 const usuarios = require('./routes/usuarioRoutes');
+const projeto = require('./routes/projetoRoutes');
 
 const app = express()
 
@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/api/v1/users', users)
 app.use('/usuarios', usuarios);
+app.use('/projeto', projeto);
 
 module.exports = app
