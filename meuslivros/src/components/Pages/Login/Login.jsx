@@ -40,7 +40,7 @@ export default class Login extends Component {
         axios.post('http://localhost:3002/usuarios/authenticate', usuarioLogin)
             .then(
                 (usuario) => {
-                    console.log('Usuario: ' + usuario.data._id + ' inserido com sucesso.');
+                    console.log('Bem vindo  ' + usuario.data.nome + ' !');
                 }
             )
             .catch(
@@ -56,7 +56,7 @@ export default class Login extends Component {
         return (
             <BrowserRouter>
                 <div className='containerBody float-right'>
-                    <form>
+                    <form onSubmit={this.onSubmit}>
                         <div className="logo">
                             <img src={logoImg} alt="Coração de Tinta" />
                         </div>

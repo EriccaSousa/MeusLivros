@@ -46,7 +46,7 @@ export default class Register extends Component {
         axios.post('http://localhost:3002/usuarios/register', novoUsuario)
             .then(
                 (usuario) => {
-                    console.log('Usuario: ' + usuario.data.id + ' inserido com sucesso.');
+                    console.log('Usuario inserido com sucesso.');
                 }
             )
             .catch(
@@ -66,18 +66,18 @@ export default class Register extends Component {
 
                     <input type="text" id="uname" placeholder="Digite o nome" name="uname" required
                         value={this.state.nome} onChange={this.setNome} />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    <div className="valid-feedback">Válido.</div>
+                    <div className="invalid-feedback">Por favor, preencha este campo.</div>
 
                     <input type="text" id="uname" placeholder="Digite o email" name="uname" required
                         value={this.state.email} onChange={this.setEmail} />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    <div className="valid-feedback">Válido.</div>
+                    <div className="invalid-feedback">Por favor, preencha este campo.</div>
 
                     <input type="password" id="pwd" placeholder="Digite a senha" name="pswd" required
                         value={this.state.senha} onChange={this.setSenha} />
-                    <div class="valid-feedback">Válido.</div>
-                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    <div className="valid-feedback">Válido.</div>
+                    <div className="invalid-feedback">Por favor, preencha este campo.</div>
 
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
