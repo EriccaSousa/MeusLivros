@@ -1,0 +1,23 @@
+Link{
+    font-size: 20px;
+}
+  
+.container{
+    width: 100%;
+    max-width: 1120px;
+    height: 75vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+form .form-group input{
+    height: 60px;
+    color: #333333;
+    border: 1px solid #dcdce6;
+    padding: 0 24px;
+    margin-bottom: 13px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
