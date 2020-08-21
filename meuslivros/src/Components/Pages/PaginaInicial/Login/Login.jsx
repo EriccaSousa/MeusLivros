@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { FiLogIn } from 'react-icons/fi';
 import { Link, Switch, Route } from 'react-router-dom';
 
-
 import './styles.css';
 
-import logoImg from '../../../assets/images/oie_transparent.png';
+import logoImg from '../../../../assets/images/oie_transparent.png';
 
 import Cadastro from '../Cadastro/Cadastro';
 

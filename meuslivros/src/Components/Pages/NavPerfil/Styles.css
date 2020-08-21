@@ -1,0 +1,15 @@
+.navbar {
+    height: 70px;
+}
+
+.btn{
+    height: 35px;
+    border: 1px solid #e02041;
+    border-radius: 8px;
+    color: #e02041;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.form {
+    border: 1px solid #e02041;
+}

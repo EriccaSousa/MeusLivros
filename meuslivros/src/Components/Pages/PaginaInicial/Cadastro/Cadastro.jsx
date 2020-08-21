@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import logoImg from '../../../assets/images/oie_transparent.png';
+import logoImg from '../../../../assets/images/oie_transparent.png';
 
 import './styles.css';
 
